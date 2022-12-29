@@ -29,16 +29,14 @@ const getRandomColor = () => {
 };
 
 const getRandomImage = () => {
-  const h = Math.floor(Math.random() * 100 / 34);
-  const str;
-  if (h > 1 ){
-    str = 'images/2.jpeg'
-  } else if (h > 0) {
-    str = 'images/1.jpeg'
+  const h = Math.floor(Math.random() * 100 / 17);
+  thestr = 'images/' + `${h}`+ '.jpeg';
+  if (h > 2){
+    thestr2 = 'A beautiful Dali';
   } else {
-    str = 'images/0.jpeg'
+    thestr2 = 'A stunning Magritte';
   }
-  return document.getElementById(str); 
+  return [thestr, thestr2];
 };
 
 const createCard = (index) => {
@@ -54,8 +52,10 @@ const loadImCard = (index) => {
   const card = document.createElement("div");
   const theim = document.createElement("img");
   card.className = "card";
-  card.innerHTML = index;
-  theim.src = getRandomImage();
+  zestring = getRandomImage();
+  theim.src = zestring[0];
+  //card.innerHTML = `<p>`+zestring[1]+`</p>`;
+  theim.className = "img-fluid card-img-top";
   card.appendChild(theim); 
   cardContainer.appendChild(card);
 };
@@ -71,7 +71,7 @@ const addCards = (pageIndex) => {
 
   for (let i = startRange + 1; i <= endRange; i++) {
     //createCard(i);
-    loadImCard(i)
+    loadImCard(i);
   }
 };
 
