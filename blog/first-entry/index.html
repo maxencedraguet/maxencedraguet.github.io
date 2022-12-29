@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="style.css">
     <title>First Entry - Web Portfolio of Max</title>
   </head>
   <body>
@@ -28,15 +29,24 @@
 
       <p>28th December 2020.</p>
 
-      <hr>
+      <div id="card-container"></div>
 
-      <p>First entry.</p>
-
-
-      <img src="/DSC_2042.jpeg" alt="View">
-
+      <div id="loader">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+        
+        <div class="card-actions">
+          <span>Showing 
+            <span id="card-count"></span> of 
+            <span id="card-total"></span> cards
+          </span>
+        </div>
+      
       <p>Max :-)</p>
     </div>
+    <script type="text/javascript" src="scrolling.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

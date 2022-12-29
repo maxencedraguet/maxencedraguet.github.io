@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-
-<!-- 
-  This is inspired by:
-  https://webdesign.tutsplus.com/tutorials/how-to-implement-infinite-scrolling-with-javascript--cms-37055
--->
-
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="/main.css">
-    <title>Web Portfolio of Max</title>
+    <link rel="stylesheet" href="style.css">
+    <title>First Entry - Web Portfolio of Max</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,38 +24,38 @@
         </div>
       </div>
     </nav>
-
     <div class="container">
-      <h1 class="title">Blog</h1>
+      <h1 class="title">First Entry</h1>
 
-      <p>Hello, just a test.</p>
+      <script type="text/javascript">
 
-      <div class="row">
-        <div class="col-sm-8">
-          <h2>Blog Entries</h2>
-          <ul>
-            <li>More entries will follow...</li>
-            <li><a href="second-entry/">Second Entry</a></li>
-            <li><a href="first-entry/">First Entry: example of an <strong></strong>infinite scroll</strong></a></li>
-          </ul>
-          <img class="img-fluid img-thumbnail""  src="../DSC_2042.jpeg" alt="View">
+        $('#btnnext').click(function () {
+            $(".spanloader").hide();
+            $("#my_image").attr("src", "images/0.jpeg");
+        });
+  
+      </script>
+
+      <p>28th December 2020.</p>
+
+      <div id="card-container"></div>
+
+      <div id="loader">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
         </div>
-        <div class="col-sm-3 offset-sm-1">
-          <h3>Links</h3>
-            <p>
-              Some more fancy links on the size
-            </p>
-            <ul class="list-unstyled">
-              <li><a href="#">Blog 1</a></li>
-              <li><a href="#">Blog 2</a></li>
-              <li><a href="#">Blog 3</a></li>
-              <li><a href="#">Blog 4</a></li>
-            </ul>
+        
+        <div class="card-actions">
+          <span>Showing 
+            <span id="card-count"></span> of 
+            <span id="card-total"></span> cards
+          </span>
         </div>
-      </div>
-
+      
       <p>Max :-)</p>
     </div>
+    <script type="text/javascript" src="scrolling.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
