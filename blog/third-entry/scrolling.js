@@ -50,13 +50,20 @@ const createCard = (index) => {
 
 const loadImCard = (index) => {
   const card = document.createElement("div");
+  const butt = document.createElement("button");
   const theim = document.createElement("img");
   card.className = "card";
+
+  butt.className = "buttonRoll";
+  butt.type ="submit";
+
   zestring = getRandomImage();
   theim.src = zestring[0];
-  //card.innerHTML = `<p>`+zestring[1]+`</p>`;
   theim.className = "img-fluid card-img-top";
-  card.appendChild(theim); 
+  theim.alt="buttonpng"; 
+
+  butt.appendChild(theim); 
+  card.appendChild(butt); 
   cardContainer.appendChild(card);
 };
 

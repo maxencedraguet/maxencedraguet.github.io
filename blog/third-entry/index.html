@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="style.css">
-    <title>Second Entry - Web Portfolio of Max</title>
+    <title>Third Entry - Web Portfolio of Max</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,7 +25,7 @@
       </div>
     </nav>
     <div class="container">
-      <h1 class="title">Second Entry</h1>
+      <h1 class="title">Third Entry</h1>
 
       <div id="body">
         <p id = "GFG_UP" style =
@@ -46,17 +46,23 @@
             
           function GFG_Fun() {
               const card = document.createElement("div");
+              var butt = document.createElement("button");
               var img = document.createElement('img');
               img.src ='/images/0.jpeg';
-              //document.getElementById('body').appendChild(img);
-              card.appendChild(img);
+              img.alt="buttonpng"; 
+
+              butt.className = "buttonRoll";
+              butt.type ="submit";
+              //card.appendChild(img);
+              butt.appendChild(img);
+              card.appendChild(butt);
               document.getElementById('body').appendChild(card);
               down.innerHTML = "Image Element Added.";
           }
         </script>
       </div>
 
-      <p>28th December 2022.</p>
+      <p>4th January 2022.</p>
 
       <div id="card-container"></div>
 
