@@ -49,21 +49,32 @@ const createCard = (index) => {
 
 
 const loadImCard = (index) => {
-  const card = document.createElement("div");
-  const butt = document.createElement("button");
+  const card = document.createElement("div"); card.className = "card";
+  const divFBin = document.createElement("div"); divFBin.className = "flip-box-inner";
+  const divFBfr = document.createElement("div"); divFBfr.className = "flip-box-front";
+  const divFBba = document.createElement("div"); divFBba.className = "flip-box-back";
+  
+  //const butt = document.createElement("button");
+  //butt.className = "buttonRoll";
+  //butt.type ="submit";
+
   const theim = document.createElement("img");
-  card.className = "card";
-
-  butt.className = "buttonRoll";
-  butt.type ="submit";
-
   zestring = getRandomImage();
   theim.src = zestring[0];
   theim.className = "img-fluid card-img-top";
-  theim.alt="buttonpng"; 
+  //theim.alt="buttonpng"; 
 
+  /*
   butt.appendChild(theim); 
   card.appendChild(butt); 
+  */
+
+  divFBfr.appendChild(theim); 
+  divFBba.innerHTML += "<h2>" + zestring[1] +"</h2>";
+  divFBba.innerHTML += "<p>What an amazing painter</p>";
+  divFBin.appendChild(divFBfr); 
+  divFBin.appendChild(divFBba); 
+  card.appendChild(divFBin); 
   cardContainer.appendChild(card);
 };
 
