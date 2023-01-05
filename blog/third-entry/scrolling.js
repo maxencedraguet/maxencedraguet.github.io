@@ -47,6 +47,11 @@ const createCard = (index) => {
   cardContainer.appendChild(card);
 };
 
+function some_magic(divFBba) {
+  const card = document.createElement("p");
+  card.innerHTML = "Maybe";
+  document.getElementById(divFBba).appendChild(card);
+}
 
 const loadImCard = (index) => {
   const card = document.createElement("div"); card.className = "card";
@@ -69,9 +74,23 @@ const loadImCard = (index) => {
   card.appendChild(butt); 
   */
 
+  // Front
   divFBfr.appendChild(theim); 
+  // Back
+  divFBba.id = "theback_" + (Math.random() + 1).toString(36).substring(7);
   divFBba.innerHTML += "<h2>" + zestring[1] +"</h2>";
   divFBba.innerHTML += "<p>What an amazing painter</p>";
+  // ... with a button now: 
+  const zebout = document.createElement("button"); 
+  const res = document.createElement("p"); 
+  zebout.onclick = function some_magic() {
+    res.innerHTML = "Totally dude";
+  }
+  zebout.innerHTML += "Is this true?";
+  divFBba.appendChild(zebout);
+  divFBba.appendChild(res);
+
+  // Adding everything
   divFBin.appendChild(divFBfr); 
   divFBin.appendChild(divFBba); 
   card.appendChild(divFBin); 

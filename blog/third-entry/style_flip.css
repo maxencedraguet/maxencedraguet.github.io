@@ -38,7 +38,7 @@
 
 /* Style the back side */
 .flip-box-back {
-  background-color: dodgerblue;
+  background-color: rgb(21, 6, 127);
   color: white;
   transform: rotateY(180deg);
 }
