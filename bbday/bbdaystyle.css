@@ -16,6 +16,12 @@
     height: auto;
 }
 
+#imgGif{
+  width: 100%;
+  max-width:300px;
+  height: auto;
+}
+
 #thebutton {
     background-color: rgb(4, 4, 162); /* Green */
     border: none;
