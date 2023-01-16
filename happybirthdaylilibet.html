@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/bbday/bbdaystyle.css">
+    <title>Happy Birthday Lilibet</title>
+  </head>
+  <body style="background-color:black;">
+    
+    <div class="container">
+      <h1 class="title text-center" style="color:rgb(150, 21, 21)"> Happy Birthday Lilibet!</h1>
+
+      <div class = "text-center"> 
+        <p style="color:rgb(4, 4, 162)">First of all, please click on this (sound on) </p>
+        <audio id="audio1" src="/bbday/audio/birthday.m4a"></audio>
+        <a href="#" id="play">
+            <p style="font-size: 40px"> <ion-icon name="play-circle-outline"></ion-icon> </p>
+        </a>
+        <p style="color:rgb(211, 207, 207); font-size:10px ">Sorry, couldn't get around the annoying autoplay ban!</p>
+        <script>
+          document.getElementById('play').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('audio1').play();
+          });
+        </script>
+      </div>
+      
+      <p class = "text-center" style="color:rgb(211, 207, 207)"> I hope you're going to have the most wonderful day! 
+        <br> And that you will excuse me for the cringe this will like make you feel,
+        <br> I just could not resist it <ion-icon name="heart" style="color:rgb(181, 181, 181)" ></ion-icon>
+        <br> <br>  <span style="color: brown">Tap the candle to blow it away!</span>
+      </p>
+      
+      <div class = "text-center"> 
+        <audio id="audio2" src="/bbday/audio/ole.m4a"></audio>
+        <a href="#" id="play2">
+          <img class="img-fluid img-thumbnail center" src="/bbday/imagesMore/Birthday-Cake.jpg" alt="View" onclick="this.src='/bbday/imagesMore/cakeAfter.jpg'">
+        </a>
+        <script>
+          document.getElementById('play2').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('audio2').play();
+          });
+        </script>
+      </div>
+
+      <p class = "text-center" style="color:rgb(211, 207, 207)"> <br>What an impressive first quarter of a century it's been ...  
+        <br>Hope I'm the first one to say this annoying "quarter of a century" crap 
+        <br> <br>From the pictures you've shown me, I wouldn't worry about aging, you seem to mature like wine
+        <br> ...and not like cheese you cruel gorgeous creature!
+        <br> <br>I cannot wait to see what great things you'll do next, <br> you cute, cute, Beast of the East <ion-icon name="happy-outline" style="color:rgb(181, 181, 181)"></ion-icon>
+      </p>
+
+      <div class="backDiv">
+        <div class="miniDiv">
+          <img class="imgSpec" src="/bbday/imagesMore/beast.jpg">
+        </div>
+        <div class="miniDiv">
+          <img class="imgSpec" src="/bbday/imagesMore/IMG_6436.jpg">
+        </div>
+        <div class="miniDiv">
+          <img class="imgSpec" src="/bbday/imagesMore/IMG_6286.jpg">
+        </div>
+      </div>
+      
+
+      <p class = "text-center" style="color:rgb(211, 207, 207)"> 
+        I miss you very much and cannot wait to see you again!
+        <br> I hope you're having a great time :)
+      </p>
+      <div id="body" class="text-center">
+
+        <audio id="audio3" src="/bbday/audio/versaire.m4a"></audio>
+        <p id = "GFG_UP" style =
+          "font-size: 15px; font-weight: bold;">
+        </p>
+        <a href="#" id="play3">
+          <button id="thebutton" onclick = "GFG_Fun()">
+            Just one more thing (click me)
+          </button>
+        </a>
+        
+        
+        <script>
+          document.getElementById('play3').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('audio3').play();
+          });
+          var up = document.getElementById('GFG_UP');
+          up.innerHTML = "";
+            
+          function GFG_Fun() {
+              const card = document.createElement("div");
+              var text = document.createElement('p');
+              text.innerHTML += "<h2>Happy birthday! </h2>";
+              text.style.color = "color:rgb(211, 207, 207)";
+              //document.getElementById('body').appendChild(img);
+              card.appendChild(text);
+              document.getElementById('body').appendChild(card);
+          }
+        </script>
+      </div>
+        
+      <p class = "text-center" style="color:rgb(211, 207, 207)" >Max <ion-icon name="heart" style="color:rgb(181, 181, 181)" ></ion-icon></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+     <!-- Ionicon -->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

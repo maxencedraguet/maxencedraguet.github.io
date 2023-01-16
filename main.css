@@ -3,11 +3,16 @@ h2 {
     color: #1a0acf;
     padding: 10px;
     font-size: 40px;
-  }
+}
 
-  img{
+img{
     max-width:900px;
     max-height:450px;
+}
+
+img2{
+    width: calc((100% / 3) - 16px);
+    max-width:32%;
 }
 
 /*
@@ -33,3 +38,12 @@ p {
     
 }
 */
+
+.main{
+    width:100%;
+    height:100%;
+    background-color:black;
+    display:flex;
+    justify-content: center;
+    object-fit: cover;
+}
