@@ -13,6 +13,39 @@
     <div class="container">
       <h1 class="title text-center" style="color:rgb(255, 255, 255)"> Merry Christmas Amore!</h1>
 
+      <div id="body" class="text-center">
+
+        <audio id="audio3" src="/christmas/merrychristmas.m4a"></audio>
+        <p id = "GFG_UP" style =
+          "font-size: 15px; font-weight: bold;">
+        </p>
+        <a href="#" id="play3">
+          <button id="thebutton" onclick = "GFG_Fun()">
+            Click here!
+          </button>
+        </a>
+        
+        
+        <script>
+          document.getElementById('play3').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('audio3').play();
+          });
+          var up = document.getElementById('GFG_UP');
+          up.innerHTML = "";
+            
+          function GFG_Fun() {
+              const card = document.createElement("div");
+              var text = document.createElement('p');
+              text.innerHTML += "<h2>Happy birthday! </h2>";
+              text.style.color = "color:rgb(211, 207, 207)";
+              //document.getElementById('body').appendChild(img);
+              card.appendChild(text);
+              document.getElementById('body').appendChild(card);
+          }
+        </script>
+      </div>
+
       <div class = "text-center"> 
       <p class = "text-center" style="color:rgb(211, 207, 207)"> I hope you're going to have <br> the most wonderful holiday season! 
         <br> I will miss you ... Jingle Boogie Amore <ion-icon name="heart" style="color:rgb(181, 181, 181)" ></ion-icon>
